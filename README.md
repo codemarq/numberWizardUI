@@ -13,5 +13,7 @@ This game was an academic project in a Unity Game Dev course on Udemy.com.  The 
 > ***Challenge:***
 >
 > * Think of a "skin" or rough UI for your game
+>   * Halloween
 > * What is the tone of voice? what are the images and the style you'll use?
+>   * Spooky, pumpkin colors, fall colors, spiders, etc.
 > * Share your idea with us!

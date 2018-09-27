@@ -198,8 +198,8 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
-  - {fileID: 1915419809}
   - {fileID: 694947526}
+  - {fileID: 1915419809}
   - {fileID: 1544006333}
   m_Father: {fileID: 0}
   m_RootOrder: 1
@@ -453,7 +453,7 @@ GameObject:
   - component: {fileID: 694947528}
   - component: {fileID: 694947527}
   m_Layer: 5
-  m_Name: Image (TBD)
+  m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -470,12 +470,12 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 71175898}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 374.2, y: 326.8}
-  m_SizeDelta: {x: 625.6, y: 653.6}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 38.700012, y: 9.724976}
+  m_SizeDelta: {x: -476.8, y: -507.65}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &694947527
 MonoBehaviour:
@@ -489,7 +489,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.9339623, g: 0.56885225, b: 0.101326115, a: 1}
+  m_Color: {r: 1, g: 0.4016373, b: 0, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -741,7 +741,7 @@ GameObject:
   - component: {fileID: 1915419811}
   - component: {fileID: 1915419810}
   m_Layer: 5
-  m_Name: Lower Button
+  m_Name: Play Again Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -759,12 +759,12 @@ RectTransform:
   m_Children:
   - {fileID: 671212414}
   m_Father: {fileID: 71175898}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -422, y: 371}
-  m_SizeDelta: {x: 517.9, y: 214.90002}
+  m_AnchoredPosition: {x: -921.3, y: 650.1}
+  m_SizeDelta: {x: 517.9, y: 219.2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1915419810
 MonoBehaviour:

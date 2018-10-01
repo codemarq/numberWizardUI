@@ -2,60 +2,43 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
+using TMPro;
 
 public class NumberWizard : MonoBehaviour {
 
-  int max;
-  int min;
+  [SerializeField] int max;
+  [SerializeField] int min;
+  [SerializeField] TextMeshProUGUI guessText;
+
   int guess;
 
 	// Use this for initialization
-	void Start () {
+	void Start ()
+  {
     StartGame();	
 	}
 
   void StartGame()
   {
-    max = 1000;
-    min = 1;
-    guess = 500;
-
-    Debug.Log("G'day mate, welcome to number wizard...");
-    Debug.Log("Pick a number, but don't tell me what it is...");
-    Debug.Log("The highest number you can pick is: " + max);
-    Debug.Log("The lowest number you can pick is: " + min);
-    Debug.Log("Tell me if your number is higher or lower than: " + guess);
-    Debug.Log("Click Higher if your number is higher than " + guess);
-    Debug.Log("Click Lower if your number is lower than " + guess);
-    Debug.Log("Click Success if " + guess + " is correct");
-
-    max = max + 1;
-
+    NextGuess();
   }
 
-  // Update is called once per frame
-  void Update ()
+  public void OnPressHigher()
   {
-    if (Input.GetKeyDown(KeyCode.UpArrow))
-    {
-      min = guess;
-      NextGuess();
-    }
-    else if (Input.GetKeyDown(KeyCode.DownArrow))
-    {
-      max = guess;
-      NextGuess();
-    }
-    else if (Input.GetKeyDown(KeyCode.Return))
-    {
-      Debug.Log("I am psychic!!!");
-      StartGame();
-    }
-	}
+    min = guess + 1;
+    NextGuess();
+  }
 
+  public void OnPressLower()
+  {
+    max = guess - 1;
+    NextGuess();
+  }
+  
   private void NextGuess()
   {
-    guess = (max + min) / 2;
-    Debug.Log("Is it higher or lower than..." + guess + "?");
+    guess = Random.Range(min, max + 1);
+    guessText.text = guess.ToString();
   }
 }
